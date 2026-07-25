@@ -1,0 +1,21 @@
+# Ambiente e caches
+.venv/
+__pycache__/
+*.pyc
+
+# Credenciais — NUNCA versionar (ver .env.example)
+.env
+
+# Dados pre-construidos (~156MB): indice Chroma, roteiros e SQLite.
+# Vem prontos no template; nao precisam ser versionados.
+data/
+
+# Saidas de execucao
+traces/
+resultados/
+
+# Predicoes geradas e artefatos locais
+predict.json
+*predict.json
+*.zip
+.DS_Store

@@ -1,0 +1,418 @@
+[
+  {
+    "id": "qc10acf43",
+    "pergunta": "Quantos filmes dirigidos por Christopher Nolan existem no banco de dados?",
+    "respostas_aceitas": [
+      "8"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filmes WHERE diretor='Christopher Nolan'"
+  },
+  {
+    "id": "q88adeb38",
+    "pergunta": "Em quantos filmes do banco Tom Hanks aparece no elenco principal?",
+    "respostas_aceitas": [
+      "14"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filme_ator WHERE ator='Tom Hanks'"
+  },
+  {
+    "id": "q7fab9cd8",
+    "pergunta": "Qual e o filme mais longo do banco de dados?",
+    "respostas_aceitas": [
+      "Gangs of Wasseypur"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT titulo FROM filmes WHERE duracao_min=(SELECT MAX(duracao_min) FROM filmes)"
+  },
+  {
+    "id": "q976c0ee1",
+    "pergunta": "Qual comedia (genero Comedy) do banco teve a maior bilheteria?",
+    "respostas_aceitas": [
+      "Toy Story 4"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT f.titulo FROM filmes f JOIN filme_genero g ON g.filme_id=f.id WHERE g.genero='Comedy' ORDER BY f.bilheteria_usd DESC LIMIT 1"
+  },
+  {
+    "id": "q0fa86fe9",
+    "pergunta": "Quais sao os tres filmes com maior bilheteria do banco, em ordem?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Star Wars: Episode VII - The Force Awakens"
+      ],
+      [
+        "Avengers: Endgame"
+      ],
+      [
+        "Avatar"
+      ]
+    ],
+    "filmes": []
+  },
+  {
+    "id": "qcf014379",
+    "pergunta": "Na cena de The Shawshank Redemption em que Brooks alimenta seu corvo Jake com uma larva, a American Humane Association impôs uma exigência sobre a larva usada. Que exigência foi essa?",
+    "respostas_aceitas": [
+      "causas naturais",
+      "morte natural",
+      "natural causes",
+      "naturalmente morta"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Shawshank Redemption"
+    ]
+  },
+  {
+    "id": "q238b75a8",
+    "pergunta": "No filme Inception (A Origem), o corredor rotativo construído para a cena de luta de Arthur teve seu comprimento aumentado durante a produção. Qual era o comprimento originalmente planejado do set, antes de Christopher Nolan decidir estendê-lo para 100 pés (cerca de 30 metros)?",
+    "respostas_aceitas": [
+      "40 pés",
+      "40 feet",
+      "40 pes",
+      "cerca de 12 metros",
+      "12 metros"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Inception"
+    ]
+  },
+  {
+    "id": "qf53fd1af",
+    "pergunta": "Ao longo de The Big Lebowski, quantos drinks White Russian o personagem The Dude bebe?",
+    "respostas_aceitas": [
+      "nove",
+      "9",
+      "nine"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Big Lebowski"
+    ]
+  },
+  {
+    "id": "qb212117a",
+    "pergunta": "Qual é o nome da rua (endereço) em Wilmington, Carolina do Norte, onde fica a casa de Jeffrey Beaumont usada nas filmagens de Veludo Azul (Blue Velvet, 1986)?",
+    "respostas_aceitas": [
+      "keaton avenue",
+      "109 keaton",
+      "keaton"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Blue Velvet"
+    ]
+  },
+  {
+    "id": "qa97dcf7a",
+    "pergunta": "O Predador em Predator (1987) foi originalmente interpretado por outro ator, dentro de uma fantasia bem diferente, antes de ser substituído por Kevin Peter Hall e redesenhado por Stan Winston. Que ator usava o traje original?",
+    "respostas_aceitas": [
+      "Jean-Claude Van Damme",
+      "Van Damme"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Predator"
+    ]
+  },
+  {
+    "id": "qacd3bc50",
+    "pergunta": "Ao negociar os contratos das sequências de The Matrix, Keanu Reeves abriu mão de uma grande fatia de seus back-end points para redistribuí-la à equipe de efeitos e figurino. Estima-se que ele tenha aberto mão de aproximadamente quanto?",
+    "respostas_aceitas": [
+      "75 milhões",
+      "US$ 75 milhões",
+      "75 million",
+      "cerca de 75 milhões",
+      "$75 million",
+      "75 milhões de dólares"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix"
+    ]
+  },
+  {
+    "id": "q9b2cb32b",
+    "pergunta": "Em qual dos dois roteiros, Blade Runner ou The Terminator, um personagem é submetido ao teste Voight-Kampff para determinar se é humano ou replicante?",
+    "respostas_aceitas": [
+      "Blade Runner",
+      "blade runner"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Blade Runner",
+      "The Terminator"
+    ]
+  },
+  {
+    "id": "q0b345743",
+    "pergunta": "No roteiro de Memento, qual é o nome do homem cuja história com perda de memória Leonard repete para si mesmo ('Remember ___'), e qual é o nome do homem de bigode que se apresenta como policial/informante e anda de picape?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Sammy Jankis",
+        "Sammy"
+      ],
+      [
+        "Teddy",
+        "Teddy Gammell",
+        "John G",
+        "John Gammell"
+      ]
+    ],
+    "filmes": [
+      "Memento"
+    ]
+  },
+  {
+    "id": "q0fe94ab4",
+    "pergunta": "Em qual dos dois roteiros, The Usual Suspects ou Reservoir Dogs, existe um criminoso lendário e quase mítico chamado Keyser Söze?",
+    "respostas_aceitas": [
+      "The Usual Suspects",
+      "Usual Suspects",
+      "Os Suspeitos"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Usual Suspects",
+      "Reservoir Dogs"
+    ]
+  },
+  {
+    "id": "qcb14074f",
+    "pergunta": "Em The Avengers, quais são os dois modelos de carro dirigidos, respectivamente, por Emma Peel e por John Steed?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Lotus Elan",
+        "Lotus",
+        "Elan"
+      ],
+      [
+        "Jaguar SS100",
+        "Jaguar",
+        "SS100",
+        "Jag"
+      ]
+    ],
+    "filmes": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "q4af5d39f",
+    "pergunta": "Em qual dos dois roteiros, The Silence of the Lambs ou Jurassic Park, um personagem engasga enquanto come amendoins e só volta a respirar depois de levar um soco no plexo solar?",
+    "respostas_aceitas": [
+      "Jurassic Park",
+      "em Jurassic Park",
+      "no Jurassic Park"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Silence of the Lambs",
+      "Jurassic Park"
+    ]
+  },
+  {
+    "id": "qac490bb8",
+    "pergunta": "Em Catch Me If You Can, quais os dois sobrenomes falsos que Frank usa: primeiro na recepcao do predio da Pan Am, ao se apresentar como estudante da Monroe High School, e depois no escritorio da Polaroid, ao se passar por funcionario da Caribbean Air?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Black",
+        "Frank Black"
+      ],
+      [
+        "Anderson",
+        "Mister Anderson",
+        "Mr. Anderson",
+        "Sr. Anderson"
+      ]
+    ],
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "q9f62cff5",
+    "pergunta": "No roteiro de Amadeus, qual é o nome do compositor rival por quem Salieri é obcecado, e qual é a obra que Salieri encomenda disfarçado a esse compositor?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Mozart",
+        "Wolfgang Mozart",
+        "Wolfgang Amadeus Mozart"
+      ],
+      [
+        "Requiem",
+        "Requiem Mass",
+        "Missa de Réquiem",
+        "missa de requiem",
+        "réquiem"
+      ]
+    ],
+    "filmes": [
+      "Amadeus"
+    ]
+  },
+  {
+    "id": "q2efa85e3",
+    "pergunta": "Em qual dos dois roteiros, The Matrix ou Fight Club, um personagem oferece ao protagonista a escolha entre uma pílula vermelha e uma pílula azul?",
+    "respostas_aceitas": [
+      "The Matrix",
+      "Matrix"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix",
+      "Fight Club"
+    ]
+  },
+  {
+    "id": "q3956470d",
+    "pergunta": "Segundo o roteiro de The Matrix, qual é o nome da empresa de desenvolvimento de software em cujo escritório no centro de Chicago Thomas Anderson (Neo) trabalha e é repreendido pelo chefe Rhineheart?",
+    "respostas_aceitas": [
+      "CorTechs",
+      "Cortechs",
+      "Cor Techs"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix"
+    ]
+  },
+  {
+    "id": "qd26e032e",
+    "pergunta": "No roteiro de American History X, na cena de abertura em que Danny não consegue dormir por causa do barulho no quarto ao lado e depois vê homens tentando roubar o carro do irmão, que horário marca o relógio digital ao lado dele?",
+    "respostas_aceitas": [
+      "3:07",
+      "3:07am",
+      "3:07 am",
+      "03:07",
+      "3h07",
+      "tres e sete da manha",
+      "três e sete da manhã"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "American History X"
+    ]
+  },
+  {
+    "id": "qbe077414",
+    "pergunta": "Em The Dark Knight Rises, que aperitivo a empregada que carrega a bandeja oferece ao Congressista quando ele a agarra durante a festa em Wayne Manor?",
+    "respostas_aceitas": [
+      "shrimp balls",
+      "shrimp ball",
+      "bolinhos de camarão",
+      "bolinhas de camarão",
+      "bolinho de camarão",
+      "bolinha de camarão",
+      "camarão",
+      "camarao"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Dark Knight Rises"
+    ]
+  },
+  {
+    "id": "qaf2daada",
+    "pergunta": "No roteiro de Braveheart, durante a demonstração da besta (crossbow) que Wallace faz para os nobres escoceses, o que Stephen esconde atrás do peitoral de armadura apoiado no fardo de feno antes do disparo?",
+    "respostas_aceitas": [
+      "melão",
+      "melao",
+      "um melão",
+      "um melao",
+      "melon",
+      "a melon"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Braveheart"
+    ]
+  },
+  {
+    "id": "q0018621c",
+    "pergunta": "Em Avatar, na cena inicial no apartamento de Jake, o que está escrito na tatuagem em destaque no ombro dele?",
+    "respostas_aceitas": [
+      "Born Loser",
+      "\"Born Loser\"",
+      "perdedor nato",
+      "nascido perdedor"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Avatar"
+    ]
+  },
+  {
+    "id": "qfc660e8d",
+    "pergunta": "Em Catch Me If You Can, o que Frank pede para beber a comissaria Marci em seu primeiro voo de carona (dead-head) no jump-seat de um 707 da Eastern?",
+    "respostas_aceitas": [
+      "um copo de leite",
+      "copo de leite",
+      "leite",
+      "glass of milk",
+      "a glass of milk",
+      "milk"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "q01dde89d",
+    "pergunta": "No roteiro de The King of Comedy, em qual programa de TV Rupert Pupkin sonha em estrear como comediante?",
+    "respostas_aceitas": [
+      "The Jerry Langford Show",
+      "Jerry Langford Show",
+      "programa do Jerry Langford",
+      "o programa do Jerry Langford"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The King of Comedy"
+    ]
+  },
+  {
+    "id": "qa3278683",
+    "pergunta": "No roteiro de Jaws, qual e o nome do barco de Quint usado para cacar o tubarao?",
+    "respostas_aceitas": [
+      "Orca",
+      "the Orca",
+      "a Orca",
+      "o Orca"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Jaws"
+    ]
+  },
+  {
+    "id": "q2268053d",
+    "pergunta": "No roteiro de The French Connection, quanto o mecanico diz que o Lincoln pesa ao coloca-lo na balanca (contra as 4.719 libras da especificacao)?",
+    "respostas_aceitas": [
+      "4839",
+      "4,839",
+      "4.839",
+      "4839 libras",
+      "4.839 libras",
+      "4,839 pounds",
+      "quatro mil oitocentos e trinta e nove libras"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The French Connection"
+    ]
+  }
+]

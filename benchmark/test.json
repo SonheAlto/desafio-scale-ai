@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "qc10acf43",
+    "pergunta": "Quantos filmes dirigidos por Christopher Nolan existem no banco de dados?",
+    "respostas_aceitas": [
+      "8"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filmes WHERE diretor='Christopher Nolan'"
+  },
+  {
+    "id": "qdf837ea7",
+    "pergunta": "Quantos filmes de ficcao cientifica (Sci-Fi) lancados a partir de 2010 ha no banco?",
+    "respostas_aceitas": [
+      "19"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(DISTINCT f.id) FROM filmes f JOIN filme_genero g ON g.filme_id=f.id WHERE g.genero='Sci-Fi' AND f.ano>=2010"
+  },
+  {
+    "id": "qbbb3fe3e",
+    "pergunta": "Em quantos filmes do banco Leonardo DiCaprio aparece no elenco principal?",
+    "respostas_aceitas": [
+      "11"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filme_ator WHERE ator='Leonardo DiCaprio'"
+  },
+  {
+    "id": "q88adeb38",
+    "pergunta": "Em quantos filmes do banco Tom Hanks aparece no elenco principal?",
+    "respostas_aceitas": [
+      "14"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filme_ator WHERE ator='Tom Hanks'"
+  },
+  {
+    "id": "qdf8e10cf",
+    "pergunta": "Qual filme do banco tem a maior bilheteria e qual foi o valor em dolares?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Star Wars: Episode VII - The Force Awakens"
+      ],
+      [
+        "936662225"
+      ]
+    ],
+    "filmes": [],
+    "sql": "SELECT titulo, bilheteria_usd FROM filmes ORDER BY bilheteria_usd DESC LIMIT 1"
+  },
+  {
+    "id": "q52b1f342",
+    "pergunta": "Quantos filmes dirigidos por Steven Spielberg existem no banco de dados?",
+    "respostas_aceitas": [
+      "13"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filmes WHERE diretor='Steven Spielberg'"
+  },
+  {
+    "id": "q7fab9cd8",
+    "pergunta": "Qual e o filme mais longo do banco de dados?",
+    "respostas_aceitas": [
+      "Gangs of Wasseypur"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT titulo FROM filmes WHERE duracao_min=(SELECT MAX(duracao_min) FROM filmes)"
+  },
+  {
+    "id": "q480a1b1e",
+    "pergunta": "Qual filme do banco tem o maior numero de votos no IMDb?",
+    "respostas_aceitas": [
+      "The Shawshank Redemption"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT titulo FROM filmes ORDER BY votos DESC LIMIT 1"
+  },
+  {
+    "id": "qdc06eefa",
+    "pergunta": "Qual e o filme mais antigo do banco de dados?",
+    "respostas_aceitas": [
+      "Das Cabinet des Dr. Caligari"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT titulo FROM filmes WHERE ano=(SELECT MIN(ano) FROM filmes)"
+  },
+  {
+    "id": "q7f76957f",
+    "pergunta": "Quantos filmes da decada de 1990 (1990 a 1999) estao no banco?",
+    "respostas_aceitas": [
+      "151"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT COUNT(*) FROM filmes WHERE ano BETWEEN 1990 AND 1999"
+  },
+  {
+    "id": "q976c0ee1",
+    "pergunta": "Qual comedia (genero Comedy) do banco teve a maior bilheteria?",
+    "respostas_aceitas": [
+      "Toy Story 4"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT f.titulo FROM filmes f JOIN filme_genero g ON g.filme_id=f.id WHERE g.genero='Comedy' ORDER BY f.bilheteria_usd DESC LIMIT 1"
+  },
+  {
+    "id": "q8fae22c4",
+    "pergunta": "Qual ator aparece em mais filmes do banco (elenco principal)?",
+    "respostas_aceitas": [
+      "Robert De Niro"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT ator FROM filme_ator GROUP BY ator ORDER BY COUNT(*) DESC LIMIT 1"
+  },
+  {
+    "id": "q3facdfef",
+    "pergunta": "Qual e o SEGUNDO filme com maior bilheteria do banco?",
+    "respostas_aceitas": [
+      "Avengers: Endgame"
+    ],
+    "respostas_todas": null,
+    "filmes": [],
+    "sql": "SELECT titulo FROM filmes ORDER BY bilheteria_usd DESC LIMIT 3"
+  },
+  {
+    "id": "q0fa86fe9",
+    "pergunta": "Quais sao os tres filmes com maior bilheteria do banco, em ordem?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Star Wars: Episode VII - The Force Awakens"
+      ],
+      [
+        "Avengers: Endgame"
+      ],
+      [
+        "Avatar"
+      ]
+    ],
+    "filmes": []
+  },
+  {
+    "id": "qcf014379",
+    "pergunta": "Na cena de The Shawshank Redemption em que Brooks alimenta seu corvo Jake com uma larva, a American Humane Association impôs uma exigência sobre a larva usada. Que exigência foi essa?",
+    "respostas_aceitas": [
+      "causas naturais",
+      "morte natural",
+      "natural causes",
+      "naturalmente morta"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Shawshank Redemption"
+    ]
+  },
+  {
+    "id": "qff314391",
+    "pergunta": "David Fincher desmentiu o boato de que a caixa no final de Se7en continha uma réplica da cabeça de Gwyneth Paltrow. Segundo ele, o que foi realmente colocado dentro da caixa para dar peso?",
+    "respostas_aceitas": [
+      "um saco de peso",
+      "shot bag",
+      "saco de chumbo",
+      "um peso"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Se7en"
+    ]
+  },
+  {
+    "id": "q3b14568b",
+    "pergunta": "As filmagens de Braveheart foram para a Irlanda com ~1.600 reservistas do Exército como figurantes. Para reduzir custos nas batalhas, que decisão Mel Gibson tomou sobre esses figurantes?",
+    "respostas_aceitas": [
+      "mesmos figurantes",
+      "mesmos extras",
+      "same extras",
+      "ambos os exercitos"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Braveheart"
+    ]
+  },
+  {
+    "id": "q238b75a8",
+    "pergunta": "No filme Inception (A Origem), o corredor rotativo construído para a cena de luta de Arthur teve seu comprimento aumentado durante a produção. Qual era o comprimento originalmente planejado do set, antes de Christopher Nolan decidir estendê-lo para 100 pés (cerca de 30 metros)?",
+    "respostas_aceitas": [
+      "40 pés",
+      "40 feet",
+      "40 pes",
+      "cerca de 12 metros",
+      "12 metros"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Inception"
+    ]
+  },
+  {
+    "id": "q9136a1b9",
+    "pergunta": "Após a morte de Oliver Reed durante as filmagens de Gladiator, a produção completou as cenas restantes de seu personagem Proximo usando um dublê e efeitos digitais. Aproximadamente quanto custou esse trabalho de cerca de dois minutos de filme?",
+    "respostas_aceitas": [
+      "3,2 milhões",
+      "US$ 3,2 milhões",
+      "3.2 million",
+      "3,2 milhoes"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gladiator"
+    ]
+  },
+  {
+    "id": "q06fb0440",
+    "pergunta": "Durante a cena do jantar em Django Unchained, Leonardo DiCaprio se feriu ao bater a mão. Que objeto ele esmagou com a palma, causando sangramento real?",
+    "respostas_aceitas": [
+      "um copo de cristal",
+      "uma taça de cristal",
+      "crystal glass",
+      "taça de licor"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Django Unchained"
+    ]
+  },
+  {
+    "id": "q40b7361f",
+    "pergunta": "O verdadeiro Frank Abagnale Jr. faz um cameo em Catch Me If You Can. Que personagem ele interpreta?",
+    "respostas_aceitas": [
+      "policial frances",
+      "policial francês",
+      "agente frances",
+      "oficial frances",
+      "French police officer",
+      "gendarme"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "qf53fd1af",
+    "pergunta": "Ao longo de The Big Lebowski, quantos drinks White Russian o personagem The Dude bebe?",
+    "respostas_aceitas": [
+      "nove",
+      "9",
+      "nine"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Big Lebowski"
+    ]
+  },
+  {
+    "id": "q3b8dcce9",
+    "pergunta": "Na famosa cena do campo de papoulas de The Wizard of Oz (1939), a neve falsa que cai sobre os personagens era feita de um material hoje reconhecido como perigoso. Que material era esse?",
+    "respostas_aceitas": [
+      "amianto",
+      "asbesto",
+      "asbestos"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Wizard of Oz"
+    ]
+  },
+  {
+    "id": "qf26dc55b",
+    "pergunta": "A escadaria que Rocky Balboa sobe em Rocky (1976) virou ponto turístico de Filadélfia, conhecida como 'Rocky Steps'. Quantos degraus tem essa escadaria do Museu de Arte da Filadélfia?",
+    "respostas_aceitas": [
+      "72",
+      "72 degraus"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Rocky"
+    ]
+  },
+  {
+    "id": "qb212117a",
+    "pergunta": "Qual é o nome da rua (endereço) em Wilmington, Carolina do Norte, onde fica a casa de Jeffrey Beaumont usada nas filmagens de Veludo Azul (Blue Velvet, 1986)?",
+    "respostas_aceitas": [
+      "keaton avenue",
+      "109 keaton",
+      "keaton"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Blue Velvet"
+    ]
+  },
+  {
+    "id": "q9b8b27f3",
+    "pergunta": "Ambientado no Texas, Days of Heaven (1978) foi na verdade filmado nos trigais de Alberta, no Canadá. Perto de qual cidade dessa província os campos de trigo foram filmados?",
+    "respostas_aceitas": [
+      "Lethbridge",
+      "Lethbridge, Alberta"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Days of Heaven"
+    ]
+  },
+  {
+    "id": "qce2cdfa4",
+    "pergunta": "O apartamento decadente de J.F. Sebastian em Blade Runner (1982) foi filmado num edifício histórico de 1893 no centro de Los Angeles, tombado como marco histórico nacional. Qual é o nome desse edifício?",
+    "respostas_aceitas": [
+      "Bradbury Building",
+      "Edifício Bradbury",
+      "Bradbury"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Blade Runner"
+    ]
+  },
+  {
+    "id": "q2c44c0c5",
+    "pergunta": "O orçamento de Reservoir Dogs (1992) saltou de cerca de US$ 30 mil para mais de US$ 1 milhão quando um ator topou entrar como coprodutor e ajudou a levantar o dinheiro. Que ator foi esse?",
+    "respostas_aceitas": [
+      "Harvey Keitel",
+      "Keitel"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Reservoir Dogs"
+    ]
+  },
+  {
+    "id": "qa97dcf7a",
+    "pergunta": "O Predador em Predator (1987) foi originalmente interpretado por outro ator, dentro de uma fantasia bem diferente, antes de ser substituído por Kevin Peter Hall e redesenhado por Stan Winston. Que ator usava o traje original?",
+    "respostas_aceitas": [
+      "Jean-Claude Van Damme",
+      "Van Damme"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Predator"
+    ]
+  },
+  {
+    "id": "q81c3c59b",
+    "pergunta": "O famoso barulho de sucção que Anthony Hopkins faz após a fala sobre comer um recenseador, em The Silence of the Lambs (1991), não estava no roteiro. Como surgiu esse detalhe?",
+    "respostas_aceitas": [
+      "improvisado",
+      "improviso",
+      "foi improvisado por Hopkins",
+      "Hopkins improvisou",
+      "improvised",
+      "improvisação"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Silence of the Lambs"
+    ]
+  },
+  {
+    "id": "q8b5f8991",
+    "pergunta": "Para animar o rosto da protagonista em Coraline (2009), o estúdio Laika usou impressão 3D para produzir milhares de peças faciais intercambiáveis. Quantos rostos foram fabricados para a personagem Coraline?",
+    "respostas_aceitas": [
+      "6333",
+      "6.333",
+      "6,333",
+      "cerca de 6.300",
+      "mais de 6 mil",
+      "6 mil e 333"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Coraline"
+    ]
+  },
+  {
+    "id": "qacd3bc50",
+    "pergunta": "Ao negociar os contratos das sequências de The Matrix, Keanu Reeves abriu mão de uma grande fatia de seus back-end points para redistribuí-la à equipe de efeitos e figurino. Estima-se que ele tenha aberto mão de aproximadamente quanto?",
+    "respostas_aceitas": [
+      "75 milhões",
+      "US$ 75 milhões",
+      "75 million",
+      "cerca de 75 milhões",
+      "$75 million",
+      "75 milhões de dólares"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix"
+    ]
+  },
+  {
+    "id": "q9b2cb32b",
+    "pergunta": "Em qual dos dois roteiros, Blade Runner ou The Terminator, um personagem é submetido ao teste Voight-Kampff para determinar se é humano ou replicante?",
+    "respostas_aceitas": [
+      "Blade Runner",
+      "blade runner"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Blade Runner",
+      "The Terminator"
+    ]
+  },
+  {
+    "id": "qe3905615",
+    "pergunta": "Em qual dos dois roteiros, The Terminator ou The Matrix, existe um sistema de defesa computadorizado chamado Skynet que desencadeia a guerra contra a humanidade?",
+    "respostas_aceitas": [
+      "The Terminator",
+      "Terminator",
+      "O Exterminador do Futuro",
+      "O Exterminador"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Terminator",
+      "The Matrix"
+    ]
+  },
+  {
+    "id": "q510cd7c4",
+    "pergunta": "No roteiro de Jaws, qual é o nome do barco de pesca em que Quint, Brody e Hooper saem para caçar o tubarão, e qual é o nome da cidade/ilha aterrorizada pelos ataques?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Orca",
+        "o Orca"
+      ],
+      [
+        "Amity",
+        "Amity Island",
+        "Ilha Amity",
+        "Amity Point"
+      ]
+    ],
+    "filmes": [
+      "Jaws"
+    ]
+  },
+  {
+    "id": "q0b345743",
+    "pergunta": "No roteiro de Memento, qual é o nome do homem cuja história com perda de memória Leonard repete para si mesmo ('Remember ___'), e qual é o nome do homem de bigode que se apresenta como policial/informante e anda de picape?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Sammy Jankis",
+        "Sammy"
+      ],
+      [
+        "Teddy",
+        "Teddy Gammell",
+        "John G",
+        "John Gammell"
+      ]
+    ],
+    "filmes": [
+      "Memento"
+    ]
+  },
+  {
+    "id": "q77680f10",
+    "pergunta": "No roteiro de Gattaca, qual é o nome completo da identidade emprestada que Vincent assume, e qual é o primeiro nome verdadeiro do homem paralítico que lhe cede essa identidade?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Jerome Morrow",
+        "Jerome"
+      ],
+      [
+        "Eugene"
+      ]
+    ],
+    "filmes": [
+      "Gattaca"
+    ]
+  },
+  {
+    "id": "qe8db8af2",
+    "pergunta": "No roteiro de Fight Club, qual é o nome do alter ego carismático que o narrador conhece, e qual é o nome do membro morto cujo nome os integrantes passam a repetir em coro ('His name was ___')?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Tyler Durden",
+        "Tyler"
+      ],
+      [
+        "Robert Paulson",
+        "Robert Paulsen",
+        "Bob"
+      ]
+    ],
+    "filmes": [
+      "Fight Club"
+    ]
+  },
+  {
+    "id": "q8b437810",
+    "pergunta": "No roteiro de The Shining, qual é o nome do hotel onde a família Torrance passa o inverno, e qual é o número do quarto proibido que assombra Danny?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Overlook",
+        "Overlook Hotel",
+        "Hotel Overlook"
+      ],
+      [
+        "237",
+        "Room 237",
+        "quarto 237"
+      ]
+    ],
+    "filmes": [
+      "The Shining"
+    ]
+  },
+  {
+    "id": "q0fe94ab4",
+    "pergunta": "Em qual dos dois roteiros, The Usual Suspects ou Reservoir Dogs, existe um criminoso lendário e quase mítico chamado Keyser Söze?",
+    "respostas_aceitas": [
+      "The Usual Suspects",
+      "Usual Suspects",
+      "Os Suspeitos"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Usual Suspects",
+      "Reservoir Dogs"
+    ]
+  },
+  {
+    "id": "qb7ff17fc",
+    "pergunta": "Em Inception, logo após a extração fracassada contra Saito: em qual cidade Cobb diz que vai descer do trem-bala, e em qual cidade ele depois diz a Arthur que pretende se esconder ('lie low')?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Kyoto",
+        "Quioto",
+        "Kioto"
+      ],
+      [
+        "Buenos Aires"
+      ]
+    ],
+    "filmes": [
+      "Inception"
+    ]
+  },
+  {
+    "id": "qe59249f8",
+    "pergunta": "No roteiro de American History X, dois veículos de atacantes aparecem em momentos opostos da história: qual é o modelo do carro dos homens que tentam roubar o Bronco de Derek na cena de abertura, e qual é o modelo do utilitário em que Jerome e sua gangue chegam para emboscar Seth e Cammeron perto da lanchonete de hambúrguer do Ben? Cite os dois modelos.",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "trans am",
+        "trans-am",
+        "gray trans am",
+        "pontiac trans am"
+      ],
+      [
+        "cherokee",
+        "jeep cherokee",
+        "jeep cherokee branco",
+        "white jeep cherokee"
+      ]
+    ],
+    "filmes": [
+      "American History X"
+    ]
+  },
+  {
+    "id": "qcb14074f",
+    "pergunta": "Em The Avengers, quais são os dois modelos de carro dirigidos, respectivamente, por Emma Peel e por John Steed?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Lotus Elan",
+        "Lotus",
+        "Elan"
+      ],
+      [
+        "Jaguar SS100",
+        "Jaguar",
+        "SS100",
+        "Jag"
+      ]
+    ],
+    "filmes": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "qd8be61b5",
+    "pergunta": "Em qual dos dois roteiros, Gladiator ou Braveheart, mastins de guerra com coleiras de lâminas afiadas são soltos contra os besteiros (crossbowmen) inimigos durante uma batalha campal?",
+    "respostas_aceitas": [
+      "Braveheart",
+      "Coração Valente"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gladiator",
+      "Braveheart"
+    ]
+  },
+  {
+    "id": "qe8d9d721",
+    "pergunta": "No roteiro de Gladiator, quantos sestércios Proximo concorda em pagar ao mercador de escravos pelo lote completo (os leões, a pantera, o númida e o 'espanhol') no Marrocos, e qual valor em sestércios Cassius fixa para cada treinador pelo espetáculo de Cartago no Coliseu?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "7.000",
+        "7000",
+        "7,000",
+        "sete mil"
+      ],
+      [
+        "90.000",
+        "90000",
+        "90,000",
+        "noventa mil"
+      ]
+    ],
+    "filmes": [
+      "Gladiator"
+    ]
+  },
+  {
+    "id": "q4af5d39f",
+    "pergunta": "Em qual dos dois roteiros, The Silence of the Lambs ou Jurassic Park, um personagem engasga enquanto come amendoins e só volta a respirar depois de levar um soco no plexo solar?",
+    "respostas_aceitas": [
+      "Jurassic Park",
+      "em Jurassic Park",
+      "no Jurassic Park"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Silence of the Lambs",
+      "Jurassic Park"
+    ]
+  },
+  {
+    "id": "q439c5ee0",
+    "pergunta": "Responda as duas partes: qual é o modelo do carro que Clarice dirige em The Silence of the Lambs, e de que cor é o jipe que Muldoon dirige quando chega com as crianças em Jurassic Park?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Pinto",
+        "Ford Pinto",
+        "um Pinto"
+      ],
+      [
+        "vermelho",
+        "vermelha",
+        "red",
+        "jipe vermelho"
+      ]
+    ],
+    "filmes": [
+      "The Silence of the Lambs",
+      "Jurassic Park"
+    ]
+  },
+  {
+    "id": "qc09e92a1",
+    "pergunta": "No roteiro de The Shawshank Redemption, qual é a ferramenta que Andy pede a Red no início e que ele usa escondido por anos, e qual é a atriz do pôster pin-up que ele pendura primeiro na cela?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "rock-hammer",
+        "rock hammer",
+        "martelo de rocha",
+        "martelinho",
+        "picareta"
+      ],
+      [
+        "Rita Hayworth",
+        "Hayworth"
+      ]
+    ],
+    "filmes": [
+      "The Shawshank Redemption"
+    ]
+  },
+  {
+    "id": "qac490bb8",
+    "pergunta": "Em Catch Me If You Can, quais os dois sobrenomes falsos que Frank usa: primeiro na recepcao do predio da Pan Am, ao se apresentar como estudante da Monroe High School, e depois no escritorio da Polaroid, ao se passar por funcionario da Caribbean Air?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Black",
+        "Frank Black"
+      ],
+      [
+        "Anderson",
+        "Mister Anderson",
+        "Mr. Anderson",
+        "Sr. Anderson"
+      ]
+    ],
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "q2de5f45f",
+    "pergunta": "No roteiro de Die Hard, qual é o nome do motorista de limusine que leva McClane ao prédio, e qual é o valor em bearer bonds que Hans Gruber quer roubar do cofre?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Argyle"
+      ],
+      [
+        "640 milhões",
+        "640 million",
+        "$640 million",
+        "640 milhões de dólares",
+        "seiscentos e quarenta milhões"
+      ]
+    ],
+    "filmes": [
+      "Die Hard"
+    ]
+  },
+  {
+    "id": "qdcf976e9",
+    "pergunta": "No roteiro de Fargo, qual é o modelo do carro novo que Jerry entrega aos sequestradores, e qual é o valor total do resgate que ele diz a eles?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Cutlass Ciera",
+        "Ciera",
+        "Oldsmobile Ciera"
+      ],
+      [
+        "80.000",
+        "80,000",
+        "eighty thousand",
+        "oitenta mil",
+        "80 mil"
+      ]
+    ],
+    "filmes": [
+      "Fargo"
+    ]
+  },
+  {
+    "id": "q9d5c82ff",
+    "pergunta": "No roteiro de Moon, qual é o nome do robô/computador que assiste Sam na base lunar, e qual é o gás que a estação minera na Lua?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "GERTY",
+        "GERTY 3000"
+      ],
+      [
+        "Helium-3",
+        "Helium 3",
+        "Helium3",
+        "hélio-3",
+        "helio-3",
+        "hélio 3",
+        "helio 3"
+      ]
+    ],
+    "filmes": [
+      "Moon"
+    ]
+  },
+  {
+    "id": "q9f62cff5",
+    "pergunta": "No roteiro de Amadeus, qual é o nome do compositor rival por quem Salieri é obcecado, e qual é a obra que Salieri encomenda disfarçado a esse compositor?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Mozart",
+        "Wolfgang Mozart",
+        "Wolfgang Amadeus Mozart"
+      ],
+      [
+        "Requiem",
+        "Requiem Mass",
+        "Missa de Réquiem",
+        "missa de requiem",
+        "réquiem"
+      ]
+    ],
+    "filmes": [
+      "Amadeus"
+    ]
+  },
+  {
+    "id": "q8b18f683",
+    "pergunta": "No roteiro de Rocky, qual é o nome da tímida namorada de Rocky que trabalha na loja de animais, e qual é o nome do campeão dos pesos-pesados que ele enfrenta?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "Adrian",
+        "Adrian Klein",
+        "Adriana"
+      ],
+      [
+        "Apollo Creed",
+        "Apollo",
+        "Creed"
+      ]
+    ],
+    "filmes": [
+      "Rocky"
+    ]
+  },
+  {
+    "id": "q2b4418b1",
+    "pergunta": "No roteiro de Good Will Hunting, qual é a função de Will Hunting no MIT antes de ser descoberto como gênio, e qual é a frase provocativa que ele diz ao rapaz de Harvard ('How do you like ___')?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "janitor",
+        "zelador",
+        "faxineiro",
+        "servente",
+        "the janitor"
+      ],
+      [
+        "them apples",
+        "how do you like them apples",
+        "how you like them apples"
+      ]
+    ],
+    "filmes": [
+      "Good Will Hunting"
+    ]
+  },
+  {
+    "id": "q2efa85e3",
+    "pergunta": "Em qual dos dois roteiros, The Matrix ou Fight Club, um personagem oferece ao protagonista a escolha entre uma pílula vermelha e uma pílula azul?",
+    "respostas_aceitas": [
+      "The Matrix",
+      "Matrix"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix",
+      "Fight Club"
+    ]
+  },
+  {
+    "id": "q3956470d",
+    "pergunta": "Segundo o roteiro de The Matrix, qual é o nome da empresa de desenvolvimento de software em cujo escritório no centro de Chicago Thomas Anderson (Neo) trabalha e é repreendido pelo chefe Rhineheart?",
+    "respostas_aceitas": [
+      "CorTechs",
+      "Cortechs",
+      "Cor Techs"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Matrix"
+    ]
+  },
+  {
+    "id": "qf65611b4",
+    "pergunta": "Em Inception, qual é o nome do jovem japonês de 18 anos que vigia a equipe adormecida no compartimento do trem-bala e coloca fones de ouvido em Nash antes de dar play num MP3 player?",
+    "respostas_aceitas": [
+      "Todashi",
+      "Tadashi"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Inception"
+    ]
+  },
+  {
+    "id": "q6ce9ddce",
+    "pergunta": "No roteiro de Fight Club, durante o abraço no grupo de apoio para câncer testicular, Bob conta a Jack que foi fisiculturista campeão e usava esteroides. Qual esteroide ele menciona dizendo que é 'para cavalos de corrida'?",
+    "respostas_aceitas": [
+      "wisterol",
+      "o wisterol"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Fight Club"
+    ]
+  },
+  {
+    "id": "qd26e032e",
+    "pergunta": "No roteiro de American History X, na cena de abertura em que Danny não consegue dormir por causa do barulho no quarto ao lado e depois vê homens tentando roubar o carro do irmão, que horário marca o relógio digital ao lado dele?",
+    "respostas_aceitas": [
+      "3:07",
+      "3:07am",
+      "3:07 am",
+      "03:07",
+      "3h07",
+      "tres e sete da manha",
+      "três e sete da manhã"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "American History X"
+    ]
+  },
+  {
+    "id": "q005fe432",
+    "pergunta": "No roteiro de Fight Club, quando Jack vai ao hotel de Marla e a vê pegando duas caixas de comida de uma van com a placa 'Meals on Wheels', quais são os dois nomes de senhoras escritos nas caixas?",
+    "respostas_aceitas": [],
+    "respostas_todas": [
+      [
+        "haniver",
+        "mrs. haniver",
+        "sra. haniver"
+      ],
+      [
+        "raines",
+        "mrs. raines",
+        "sra. raines"
+      ]
+    ],
+    "filmes": [
+      "Fight Club"
+    ]
+  },
+  {
+    "id": "qeb00273b",
+    "pergunta": "Em The Dark Knight Rises, durante a festa do Dia de Harvey Dent em Wayne Manor, para qual cidade Foley diz que a esposa do Comissário Gordon se mudou levando os filhos?",
+    "respostas_aceitas": [
+      "Cleveland",
+      "para Cleveland"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Dark Knight Rises"
+    ]
+  },
+  {
+    "id": "qa56ca23a",
+    "pergunta": "Em The Avengers, o que Emma Peel encontra dentro do pacote entregue por um mensageiro em seu apartamento, junto com o cartão pedindo que ela atenda o telefone?",
+    "respostas_aceitas": [
+      "kippers",
+      "kipper",
+      "arenques defumados",
+      "arenque defumado",
+      "arenques",
+      "arenque",
+      "peixes defumados",
+      "peixe defumado",
+      "brace of kippers"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Avengers"
+    ]
+  },
+  {
+    "id": "qbe077414",
+    "pergunta": "Em The Dark Knight Rises, que aperitivo a empregada que carrega a bandeja oferece ao Congressista quando ele a agarra durante a festa em Wayne Manor?",
+    "respostas_aceitas": [
+      "shrimp balls",
+      "shrimp ball",
+      "bolinhos de camarão",
+      "bolinhas de camarão",
+      "bolinho de camarão",
+      "bolinha de camarão",
+      "camarão",
+      "camarao"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Dark Knight Rises"
+    ]
+  },
+  {
+    "id": "qe18a2f7c",
+    "pergunta": "No roteiro de Gravity, quando Ryan procura o botão de energia no painel do Soyuz (todo etiquetado em russo), qual é o rótulo escrito no botão que ela pressiona para ligar o painel de controle?",
+    "respostas_aceitas": [
+      "BKN"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gravity"
+    ]
+  },
+  {
+    "id": "q47c95628",
+    "pergunta": "No roteiro de Gladiator, qual é o nome do jovem soldado moribundo, de cabeça raspada e com um buraco perfurado no crânio, que Maximus consola na tenda hospitalar após a batalha na Germânia?",
+    "respostas_aceitas": [
+      "Valerius",
+      "Valério",
+      "Valerio"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gladiator"
+    ]
+  },
+  {
+    "id": "qaf2daada",
+    "pergunta": "No roteiro de Braveheart, durante a demonstração da besta (crossbow) que Wallace faz para os nobres escoceses, o que Stephen esconde atrás do peitoral de armadura apoiado no fardo de feno antes do disparo?",
+    "respostas_aceitas": [
+      "melão",
+      "melao",
+      "um melão",
+      "um melao",
+      "melon",
+      "a melon"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Braveheart"
+    ]
+  },
+  {
+    "id": "qe0d5bc67",
+    "pergunta": "No roteiro de Gladiator, no mercado de escravos no Marrocos, quantos homens o mercador de escravos beduíno afirma que o 'espanhol' (Maximus) matou antes de ser subjugado?",
+    "respostas_aceitas": [
+      "quatorze",
+      "catorze",
+      "14",
+      "fourteen"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gladiator"
+    ]
+  },
+  {
+    "id": "q252c313b",
+    "pergunta": "No roteiro de The Silence of the Lambs, segundo o Sr. Yow, qual é o número da unidade do depósito Split City Mini-Storage que foi alugada em nome de 'Miss Hester Mofet'?",
+    "respostas_aceitas": [
+      "31",
+      "unidade 31",
+      "unit 31",
+      "número 31",
+      "trinta e um"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Silence of the Lambs"
+    ]
+  },
+  {
+    "id": "q0d00fc4a",
+    "pergunta": "No roteiro de Jurassic Park, quando Hammond revela a maquete do parque e lista os dinossauros (Apatossauros, Gallimimus, Dilophosaurus, o poderoso T-Rex), quantas 'criaturas fabulosas' ele diz que o parque tem até então?",
+    "respostas_aceitas": [
+      "238",
+      "238 criaturas",
+      "duzentas e trinta e oito",
+      "238 fabulous creatures"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Jurassic Park"
+    ]
+  },
+  {
+    "id": "q0018621c",
+    "pergunta": "Em Avatar, na cena inicial no apartamento de Jake, o que está escrito na tatuagem em destaque no ombro dele?",
+    "respostas_aceitas": [
+      "Born Loser",
+      "\"Born Loser\"",
+      "perdedor nato",
+      "nascido perdedor"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Avatar"
+    ]
+  },
+  {
+    "id": "q8b29efbe",
+    "pergunta": "Em Avatar, quando Grace decide levar a equipe para as Montanhas Aleluia para fugir da supervisão de Quaritch e Selfridge, ela diz que há um link móvel em qual site (número)?",
+    "respostas_aceitas": [
+      "Site 26",
+      "26",
+      "vinte e seis",
+      "site vinte e seis"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Avatar"
+    ]
+  },
+  {
+    "id": "qbdc99a2f",
+    "pergunta": "Em Catch Me If You Can, qual e o preco do uniforme de piloto da Pan Am que Frank obtem na Well-Built Uniform Company?",
+    "respostas_aceitas": [
+      "164 dolares",
+      "164 dólares",
+      "$164",
+      "164",
+      "cento e sessenta e quatro dolares",
+      "cento e sessenta e quatro dólares",
+      "164 dollars"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "qfc660e8d",
+    "pergunta": "Em Catch Me If You Can, o que Frank pede para beber a comissaria Marci em seu primeiro voo de carona (dead-head) no jump-seat de um 707 da Eastern?",
+    "respostas_aceitas": [
+      "um copo de leite",
+      "copo de leite",
+      "leite",
+      "glass of milk",
+      "a glass of milk",
+      "milk"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Catch Me If You Can"
+    ]
+  },
+  {
+    "id": "q623ee36c",
+    "pergunta": "No roteiro de Die Hard, quando McClane encontra uma pequena porta de metal escura no poço do elevador e joga uma moeda no vão para estimar a profundidade pelo som da queda, que moeda ele acaba jogando?",
+    "respostas_aceitas": [
+      "nickel",
+      "niquel",
+      "níquel",
+      "um nickel",
+      "moeda de 5 centavos",
+      "moeda de cinco centavos",
+      "5 centavos",
+      "cinco centavos"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Die Hard"
+    ]
+  },
+  {
+    "id": "q378ed853",
+    "pergunta": "No roteiro de Clerks, para qual estado Dante conta que Allan Harris se mudou apos a formatura, para criar ovelhas?",
+    "respostas_aceitas": [
+      "Idaho",
+      "para Idaho",
+      "o Idaho"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Clerks"
+    ]
+  },
+  {
+    "id": "q01dde89d",
+    "pergunta": "No roteiro de The King of Comedy, em qual programa de TV Rupert Pupkin sonha em estrear como comediante?",
+    "respostas_aceitas": [
+      "The Jerry Langford Show",
+      "Jerry Langford Show",
+      "programa do Jerry Langford",
+      "o programa do Jerry Langford"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The King of Comedy"
+    ]
+  },
+  {
+    "id": "q17766385",
+    "pergunta": "Em The Big Lebowski, na mensagem que o Duty Officer Rolvaag da L.A.P.D. deixa na secretaria eletronica, em que local o Dude pode retirar seu veiculo recuperado?",
+    "respostas_aceitas": [
+      "North Hollywood Auto Circus",
+      "Auto Circus",
+      "Auto Circus de North Hollywood",
+      "no North Hollywood Auto Circus na Victory",
+      "North Hollywood Auto Circus on Victory"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The Big Lebowski"
+    ]
+  },
+  {
+    "id": "qe353bf61",
+    "pergunta": "No roteiro de Cast Away, de que material e feita a vela da jangada que Chuck constroi para escapar da ilha?",
+    "respostas_aceitas": [
+      "vestidos de festa",
+      "vestidos",
+      "vestidos de grife",
+      "designer dresses",
+      "dresses",
+      "vestidos de estilista"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Cast Away"
+    ]
+  },
+  {
+    "id": "q125b6b16",
+    "pergunta": "No roteiro de Raging Bull, para qual peso (em libras) Jake LaMotta reclama que Joey o inscreveu numa luta, sob pena de perder 15 mil dolares se nao bater o peso?",
+    "respostas_aceitas": [
+      "155",
+      "155 libras",
+      "cento e cinquenta e cinco libras",
+      "155 pounds",
+      "cento e cinquenta e cinco"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Raging Bull"
+    ]
+  },
+  {
+    "id": "qa3278683",
+    "pergunta": "No roteiro de Jaws, qual e o nome do barco de Quint usado para cacar o tubarao?",
+    "respostas_aceitas": [
+      "Orca",
+      "the Orca",
+      "a Orca",
+      "o Orca"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Jaws"
+    ]
+  },
+  {
+    "id": "qbd22ae08",
+    "pergunta": "No roteiro de Gran Torino, por quantos anos Walt Kowalski diz ter trabalhado na fabrica da Ford?",
+    "respostas_aceitas": [
+      "30",
+      "30 anos",
+      "trinta anos",
+      "thirty years",
+      "trinta"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Gran Torino"
+    ]
+  },
+  {
+    "id": "q4996f6a3",
+    "pergunta": "No roteiro de Moneyball, quanto por ano Billy Beane afirma que custa o jogador de quem eles so analisam a porcentagem de embasamento (on-base percentage)?",
+    "respostas_aceitas": [
+      "$285,000",
+      "285000",
+      "285 mil",
+      "285 mil dolares",
+      "285.000",
+      "duzentos e oitenta e cinco mil dolares",
+      "$285,000 a year"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "Moneyball"
+    ]
+  },
+  {
+    "id": "q2268053d",
+    "pergunta": "No roteiro de The French Connection, quanto o mecanico diz que o Lincoln pesa ao coloca-lo na balanca (contra as 4.719 libras da especificacao)?",
+    "respostas_aceitas": [
+      "4839",
+      "4,839",
+      "4.839",
+      "4839 libras",
+      "4.839 libras",
+      "4,839 pounds",
+      "quatro mil oitocentos e trinta e nove libras"
+    ],
+    "respostas_todas": null,
+    "filmes": [
+      "The French Connection"
+    ]
+  }
+]

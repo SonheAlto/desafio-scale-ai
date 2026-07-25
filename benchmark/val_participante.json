@@ -1,0 +1,342 @@
+[
+  {
+    "id": "q1eb1affa",
+    "pergunta": "Quantos filmes do banco tem nota IMDb maior ou igual a 9.0?"
+  },
+  {
+    "id": "qccb835e3",
+    "pergunta": "Quais sao os tres filmes com mais votos no IMDb, em ordem?"
+  },
+  {
+    "id": "qd172966e",
+    "pergunta": "Quais sao os dois filmes de Christopher Nolan com maior nota IMDb?"
+  },
+  {
+    "id": "qcd81f6f8",
+    "pergunta": "Qual e o segundo filme mais longo do banco?"
+  },
+  {
+    "id": "q027bba26",
+    "pergunta": "Quais sao os tres generos com mais filmes no banco?"
+  },
+  {
+    "id": "q9ee1712d",
+    "pergunta": "Quantos filmes do banco duram mais de 180 minutos?"
+  },
+  {
+    "id": "q9637953b",
+    "pergunta": "Qual a duracao media, em minutos (parte inteira), dos filmes de Christopher Nolan no banco?"
+  },
+  {
+    "id": "q54e5e220",
+    "pergunta": "Qual a soma das bilheterias, em dolares, dos filmes de Christopher Nolan no banco?"
+  },
+  {
+    "id": "qa1ca7d1e",
+    "pergunta": "Qual a nota IMDb media (1 casa decimal) dos filmes de Quentin Tarantino no banco?"
+  },
+  {
+    "id": "q8b020779",
+    "pergunta": "Qual diretor tem mais filmes no banco de dados?"
+  },
+  {
+    "id": "qf3ca80d6",
+    "pergunta": "Qual a bilheteria media, em dolares (parte inteira), dos filmes com Tom Cruise no elenco principal?"
+  },
+  {
+    "id": "qfccb8610",
+    "pergunta": "Qual arrecadou mais: Inception ou Interstellar? E qual a diferenca em dolares?"
+  },
+  {
+    "id": "qcf2fcdd9",
+    "pergunta": "Quem aparece em mais filmes do banco: Robert De Niro ou Al Pacino? Em quantos cada?"
+  },
+  {
+    "id": "qd74cac8e",
+    "pergunta": "Quantos filmes de terror (Horror) do banco arrecadaram mais de 100 milhoes de dolares?"
+  },
+  {
+    "id": "q18161bc4",
+    "pergunta": "Durante as filmagens de Life of Pi (As Aventuras de Pi), um e-mail vazado de uma monitora da American Humane Association revelou que um dos animais quase morreu num tanque de água no set. Que animal quase se afogou?"
+  },
+  {
+    "id": "qbc019a41",
+    "pergunta": "Como o filme era em preto e branco, a equipe de Psycho (1960) usou um produto de mercado no lugar de sangue na cena do chuveiro, porque ele aparecia melhor na tela. Que produto foi esse?"
+  },
+  {
+    "id": "q12f3f0eb",
+    "pergunta": "A cena do funeral de Gandhi (1982) entrou para o Guinness como a que usou o maior número de figurantes na história do cinema. Aproximadamente quantos figurantes participaram?"
+  },
+  {
+    "id": "qbfccba22",
+    "pergunta": "Para as filmagens de Titanic (1997), a produção construiu uma réplica quase em escala real do exterior do navio num tanque em Rosarito, no México. Qual era o comprimento aproximado dessa réplica?"
+  },
+  {
+    "id": "qbfaaf5ca",
+    "pergunta": "Para filmar o tubarão mecânico de Jaws (1975), apelidado de 'Bruce', foram construídas três versões do aparato. Aproximadamente quanto custou a construção desses tubarões mecânicos?"
+  },
+  {
+    "id": "qd31d5cf0",
+    "pergunta": "Na cena de The Lord of the Rings: The Two Towers em que Aragorn chuta um capacete e solta um grito, a reação de Viggo Mortensen foi real: ele se machucou de verdade ao dar o chute. Qual foi a lesão?"
+  },
+  {
+    "id": "q61160967",
+    "pergunta": "O verdadeiro Jordan Belfort faz uma ponta em The Wolf of Wall Street, na sequência final do filme. Que personagem ele interpreta?"
+  },
+  {
+    "id": "qf797b6a3",
+    "pergunta": "Quando foi lançado, Casino (1995) bateu o recorde de mais usos da palavra 'fuck' num filme. Quantas vezes o termo é dito?"
+  },
+  {
+    "id": "q85f888ed",
+    "pergunta": "Para simular a superfície lunar nas maquetes físicas da base Sarang em Moon (2009), a equipe de efeitos práticos liderada por Bill Pearson usou um material doméstico barato. Qual?"
+  },
+  {
+    "id": "q9495b1f3",
+    "pergunta": "A colisão real entre ônibus e trem de O Fugitivo (1993) foi filmada em uma cidade pequena da Carolina do Norte, e os destroços nunca foram removidos, virando ponto turístico até hoje. Qual é essa cidade?"
+  },
+  {
+    "id": "qe205c2d2",
+    "pergunta": "O bairro de casas em tons pastel de Edward Scissorhands (1990) foi filmado num loteamento real em Lutz, na Flórida, onde dezenas de casas foram pintadas temporariamente. Qual é o nome da rua onde fica a casa usada nas filmagens?"
+  },
+  {
+    "id": "q640df4e5",
+    "pergunta": "As cenas de caça ao búfalo e as vastas pradarias de Dances with Wolves (1990) foram filmadas no rancho Triple U Buffalo Ranch, em qual estado americano?"
+  },
+  {
+    "id": "q5bbdac0a",
+    "pergunta": "As tomadas externas do Overlook Hotel em The Shining (1980) foram feitas num hotel e resort de esqui real no estado do Oregon. Qual é o nome desse hotel?"
+  },
+  {
+    "id": "q7bcd0c9b",
+    "pergunta": "Kevin Smith financiou Clerks (1994) estourando cartões de crédito e vendendo sua coleção de quadrinhos. Qual foi o orçamento total do filme?"
+  },
+  {
+    "id": "q8e12f165",
+    "pergunta": "O papel do Capitão Willard em Apocalypse Now (1979) começou a ser filmado com Harvey Keitel, demitido por Coppola após cerca de uma semana de filmagem. Que ator o substituiu?"
+  },
+  {
+    "id": "qc0ccb188",
+    "pergunta": "Na cena do 'chestburster' em Alien (1979), Ridley Scott não avisou o elenco sobre o jato que os atingiria, para captar reações genuínas. As entranhas e o sangue espirrados nos atores eram de verdade — de que origem?"
+  },
+  {
+    "id": "q349e5271",
+    "pergunta": "Para dar todas as emoções ao personagem Jack Skellington em The Nightmare Before Christmas (1993), a equipe esculpiu cabeças intercambiáveis representando quase quantas expressões faciais distintas?"
+  },
+  {
+    "id": "q9fa889fc",
+    "pergunta": "Em vez de um cachê fixo, Tom Hanks abriu mão de parte do salário em Forrest Gump (1994) em troca de uma porcentagem da bilheteria. Aproximadamente quanto ele acabou ganhando com esse acordo?"
+  },
+  {
+    "id": "q39035be4",
+    "pergunta": "Quantas semanas antes do início das filmagens de American Gangster a Universal demitiu o diretor original do projeto, Antoine Fuqua, em 2004?"
+  },
+  {
+    "id": "q718e08e8",
+    "pergunta": "Em qual dos dois roteiros, Alien ou Aliens, um andróide da tripulação se descreve preferindo o termo 'artificial person' (pessoa artificial)?"
+  },
+  {
+    "id": "q03e026e7",
+    "pergunta": "Em qual dos dois roteiros, 2001: A Space Odyssey ou Solaris, o computador de bordo da nave se chama HAL 9000?"
+  },
+  {
+    "id": "qb5fdd201",
+    "pergunta": "No roteiro de Pulp Fiction, como Vincent diz que os franceses chamam um Quarter Pounder with Cheese em Paris, e qual é a frase bordada na carteira de Jules?"
+  },
+  {
+    "id": "qe84d39eb",
+    "pergunta": "No roteiro de Se7en, qual é o primeiro pecado escrito na cena do crime da primeira vítima (o homem obeso), e qual é o nome da esposa de Mills?"
+  },
+  {
+    "id": "q91e08d5b",
+    "pergunta": "No roteiro de The Social Network, qual é o nome do primeiro site que Mark cria numa noite comparando fotos de alunas, e qual é o nome do site/empresa que ele lança em seguida?"
+  },
+  {
+    "id": "qf5665ce0",
+    "pergunta": "No roteiro de The Green Mile, qual é o nome do prisioneiro gigante condenado à morte com poderes de cura, e qual é o nome do rato amestrado do bloco?"
+  },
+  {
+    "id": "q7c9d424c",
+    "pergunta": "No roteiro de The Sixth Sense, qual é a frase com que o menino Cole revela o que ele enxerga, e qual é o nome do psicólogo infantil que tenta ajudá-lo?"
+  },
+  {
+    "id": "qb3224af2",
+    "pergunta": "Em qual dos dois roteiros, Citizen Kane ou Sunset Blvd., a palavra final de um homem à beira da morte é 'Rosebud'?"
+  },
+  {
+    "id": "q0d3fb423",
+    "pergunta": "No roteiro de The Terminator, qual é a designação de modelo do ciborgue enviado ao passado, e qual é o nome do sistema de defesa computadorizado que desencadeia a guerra?"
+  },
+  {
+    "id": "qdbe8317a",
+    "pergunta": "No roteiro de Toy Story, qual é o bordão que o boneco Buzz Lightyear repete, e qual é o nome do menino dono dos brinquedos?"
+  },
+  {
+    "id": "q4c4808ff",
+    "pergunta": "No roteiro de Reservoir Dogs, qual é o verdadeiro nome do capanga apelidado de Mr. Blonde, e qual é o apelido/codinome do integrante que na verdade é um policial infiltrado?"
+  },
+  {
+    "id": "qa6ff89a8",
+    "pergunta": "Em qual dos dois roteiros, The Lord of the Rings: The Two Towers ou The Princess Bride, existe uma criatura chamada Gollum obcecada por 'my precious' (meu precioso)?"
+  },
+  {
+    "id": "qaf1c5138",
+    "pergunta": "No roteiro de Slumdog Millionaire, qual é o cargo de Jamal no call center antes de entrar no programa, e qual é o valor do prêmio máximo em jogo no programa de perguntas?"
+  },
+  {
+    "id": "q5d851766",
+    "pergunta": "Em qual dos dois roteiros, Forrest Gump ou Rocky, um personagem funda uma empresa de camarão chamada 'Bubba-Gump'?"
+  },
+  {
+    "id": "q6497f2f7",
+    "pergunta": "Responda as duas partes: qual relíquia sagrada é procurada em Indiana Jones and the Last Crusade, e qual é o primeiro nome do filho caçula de Vito Corleone que assume o comando da família em The Godfather?"
+  },
+  {
+    "id": "qf134d42f",
+    "pergunta": "No roteiro de The Silence of the Lambs, o instrutor Brigham entrega dois objetos a Clarice em momentos diferentes da história: um logo após o exercício simulado de tiro no início, e outro dentro do carro, antes de ela embarcar no avião rumo à Virgínia Ocidental. Quais são os dois objetos?"
+  },
+  {
+    "id": "q57e7a88a",
+    "pergunta": "No roteiro de Aladdin, qual é o nome do grão-vizir vilão que quer se tornar sultão, e qual é o nome do papagaio que o acompanha?"
+  },
+  {
+    "id": "q073930f5",
+    "pergunta": "No roteiro de Titanic, qual é o nome do colar de diamante azul cobiçado, e qual é o nome completo do jovem artista pobre por quem Rose se apaixona?"
+  },
+  {
+    "id": "qb90a3b02",
+    "pergunta": "No roteiro de Finding Nemo, qual é o endereço completo escrito na máscara de mergulho do mergulhador, e qual é o nome do pai de Nemo?"
+  },
+  {
+    "id": "qd89ad7dc",
+    "pergunta": "No roteiro de Shrek, qual é o nome do lorde baixinho que ordena que Shrek resgate a princesa, e qual é o animal falante que vira companheiro de Shrek?"
+  },
+  {
+    "id": "q75b44958",
+    "pergunta": "No roteiro de Django Unchained, qual é o nome do caçador de recompensas alemão que liberta Django, e qual é o nome da esposa de Django que ele quer resgatar?"
+  },
+  {
+    "id": "q89541d1e",
+    "pergunta": "No roteiro de Cast Away, para qual empresa de entregas Chuck Noland trabalha, e qual é a marca estampada na bola-companheira com quem ele conversa na ilha?"
+  },
+  {
+    "id": "q3449f744",
+    "pergunta": "No roteiro de The Fugitive, qual é a profissão de Richard Kimble, e qual é a característica física que define o verdadeiro assassino de sua esposa?"
+  },
+  {
+    "id": "q705bd397",
+    "pergunta": "Em qual dos dois roteiros, Scarface ou Heat, um personagem grita 'say hello to my little friend' durante um tiroteio?"
+  },
+  {
+    "id": "qabb22636",
+    "pergunta": "Segundo o roteiro de Office Space, qual e o nome da empresa de tecnologia onde Peter Gibbons e seus colegas trabalham?"
+  },
+  {
+    "id": "q3b1b95f4",
+    "pergunta": "No roteiro de Slumdog Millionaire, qual e o nome do apresentador do programa 'Who Wants to Be a Millionaire' que interroga e humilha Jamal?"
+  },
+  {
+    "id": "q2ad135a1",
+    "pergunta": "Em Fear and Loathing in Las Vegas, qual e a droga que, segundo o Dr. Gonzo, e extraida da glandula adrenal de um ser humano vivo?"
+  },
+  {
+    "id": "qa8c9c5cd",
+    "pergunta": "No roteiro de Groundhog Day, que horario o radio-relogio digital marca ao ligar todas as manhas, quando Phil acorda repetindo o mesmo dia?"
+  },
+  {
+    "id": "q85a8bb51",
+    "pergunta": "No roteiro de Se7en, quais sao os dois primeiros pecados capitais cujos assassinatos John Doe ja cometeu, marcados como concluidos na investigacao?"
+  },
+  {
+    "id": "qb3cc0663",
+    "pergunta": "Em Charade, para qual cidade Regina (Reggie) conta a Sylvie que se mudou por estar cansada do estilo 'American Provincial'?"
+  },
+  {
+    "id": "qd920de83",
+    "pergunta": "No roteiro de Donnie Brasco, o que Joe encontra ao abrir a caixa de presente, provocando gargalhadas do grupo?"
+  },
+  {
+    "id": "q5249f015",
+    "pergunta": "Em Hannah and Her Sisters, qual aperitivo Hannah sugere que Lee experimente, feito por Holly e a amiga dela, durante a festa?"
+  },
+  {
+    "id": "q345d6342",
+    "pergunta": "No roteiro de Gattaca, qual e o rotulo escrito no botao que Lamar aperta ao liberar a passagem de Vincent, mesmo sabendo a verdade sobre ele?"
+  },
+  {
+    "id": "q7cef0516",
+    "pergunta": "No roteiro de Saving Private Ryan, qual e o nome do medico (medic) da tropa que e baleado no abdomen e morre enquanto os companheiros tentam socorre-lo com morfina?"
+  },
+  {
+    "id": "qbf0487d2",
+    "pergunta": "Em Django Unchained, que arma dispara da manga do casaco do Dr. King Schultz, por um mecanismo deslizante de metal, quando ele finge apertar a mao do xerife Bill Sharp?"
+  },
+  {
+    "id": "q96f4ac03",
+    "pergunta": "No roteiro de The Taking of Pelham One Two Three, quantos refens os sequestradores mantem no vagao do metro ao exigir o resgate?"
+  },
+  {
+    "id": "qf2ffdb56",
+    "pergunta": "No roteiro de The Shining, qual e o numero do quarto do hotel Overlook em que Danny e proibido de entrar e do qual Halloran o adverte?"
+  },
+  {
+    "id": "qc93ff01d",
+    "pergunta": "Em Ocean's Eleven, quanto Danny Ocean estima que o cofre dos tres cassinos guarda numa noite de luta, a noite escolhida para o roubo?"
+  },
+  {
+    "id": "q04aa7797",
+    "pergunta": "No roteiro de Memento, o que diz a tatuagem em destaque no peito de Leonard, escrita ao contrario e legivel no espelho?"
+  },
+  {
+    "id": "q7ccbeab7",
+    "pergunta": "No roteiro de Airplane!, de qual portao parte o voo 209 para Chicago, segundo o painel do aeroporto?"
+  },
+  {
+    "id": "qe5a9d785",
+    "pergunta": "No roteiro de The Hangover, qual valor Alan le em voz alta no comprovante de saque do caixa eletronico do cassino Rio?"
+  },
+  {
+    "id": "q7c7e0a60",
+    "pergunta": "Em Pulp Fiction, o que Vincent Vega pede para beber ao fazer o pedido no Jack Rabbit Slim's?"
+  },
+  {
+    "id": "qedd321fc",
+    "pergunta": "No roteiro de American Psycho, que moeda Patrick Bateman joga no chao dizendo para 'comprar chiclete'?"
+  },
+  {
+    "id": "q5efe2b71",
+    "pergunta": "No roteiro de Die Hard, conversando com Holly no banheiro privativo do escritório, McClane conta que poderia se hospedar com Cappy Roberts, um colega policial que se aposentou na região. Em que cidade Cappy mora?"
+  },
+  {
+    "id": "qf8a22af6",
+    "pergunta": "Em The Big Lebowski, em qual teatro Allan, o senhorio do Dude, diz que finalmente conseguiu o espaco para apresentar seu quinteto de danca?"
+  },
+  {
+    "id": "q15a1b3af",
+    "pergunta": "Em Being John Malkovich, em qual bar Maxine diz a Craig para encontra-la as sete horas?"
+  },
+  {
+    "id": "qffbc6cad",
+    "pergunta": "No roteiro de Shrek, de que e feita a vela que Shrek acende para jantar em seu casebre?"
+  },
+  {
+    "id": "qb97802dd",
+    "pergunta": "No roteiro de The Wrestler, com quantas libras o locutor anuncia que Randy 'The Ram' Robinson entra no ringue?"
+  },
+  {
+    "id": "qdc77c4fa",
+    "pergunta": "Em Star Trek II: The Wrath of Khan, a bordo de qual nave estelar (starship) da Frota estao Chekov e o Capitao Terrell quando sao capturados por Khan?"
+  },
+  {
+    "id": "q832e6fca",
+    "pergunta": "No roteiro de 12 Years a Slave, por quantos anos Eliza diz que seu antigo senhor a cobriu de conforto e luxo, prometendo emancipa-la?"
+  },
+  {
+    "id": "qd843ca03",
+    "pergunta": "No roteiro de Fargo, alem do carro novo (a Cutlass Ciera), quanto Jerry Lundegaard combina de pagar a Carl e Gaear pelo sequestro de sua esposa?"
+  },
+  {
+    "id": "q06269cb7",
+    "pergunta": "No roteiro de Rush, a quantas milhas por hora James Hunt diz que o carro de Formula 1, o 'caixaozinho' cercado de combustivel, e conduzido?"
+  }
+]
