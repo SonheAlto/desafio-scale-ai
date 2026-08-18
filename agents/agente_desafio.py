@@ -83,7 +83,7 @@ def consultar_sql(sql: str) -> list[dict]:
 
 def responder(pergunta: str) -> dict:
     """Assinatura fixa do desafio: pergunta -> {"resposta", "trace"}."""
-    resultado = agente.run_sync(pergunta, model=MODELO, usage_limits=UsageLimits(request_limit=3))
+    resultado = agente.run_sync(pergunta, model=MODELO, usage_limits=UsageLimits(request_limit=10))
     uso = resultado.usage
     registrar_custo(uso.input_tokens, uso.output_tokens, rotulo="desafio")
     logar_resposta(resultado.output.resposta, resultado.output.rationale)
