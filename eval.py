@@ -100,7 +100,7 @@ def main() -> None:
         resultados.append({**q, "resposta_dada": resposta, "rationale": rationale, "acertou": ok, "erro": erro, "n_tools": n_tools})
         traces_completos.append({"pergunta": q["pergunta"], "resposta_dada": resposta, "acertou": ok, "rationale": rationale, "trace": trace})
         simbolo = "V" if ok else "X"
-        print(f"[{i:3d}/{len(perguntas)}] {simbolo}  ({q['categoria']}) {q['pergunta'][:70]}")
+        print(f"[{i:3d}/{len(perguntas)}] {simbolo}  ({q.get('categoria', 'sem_categoria')}) {q['pergunta'][:70]}")
 
     total_ok = sum(acertos)
     total = len(acertos)
