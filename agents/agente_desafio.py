@@ -47,6 +47,12 @@ Regras:
   O schema e: filmes(id, titulo, ano, certificado, duracao_min, nota_imdb,
   metascore, votos, bilheteria_usd, diretor, sinopse, tem_roteiro),
   filme_genero(filme_id, genero) e filme_ator(filme_id, ator, posicao).
+- A tabela filme_ator ja representa o elenco principal: cada filme tem ate
+  quatro atores, e `posicao` indica apenas a ordem dos creditos. Portanto,
+  para perguntas como "em quantos filmes X aparece no elenco principal?",
+  conte todas as linhas `WHERE ator='X'`; nao filtre `posicao=1`. Use
+  `posicao` somente quando a pergunta pedir explicitamente o primeiro ator,
+  protagonista ou uma posicao especifica.
 - Para JOINs, ligue filme_genero.filme_id ou filme_ator.filme_id a filmes.id.
   Para rankings, selecione todos os candidatos, use ORDER BY e LIMIT no SQL.
 - Use buscar_roteiros para fatos que aparecem no texto dos roteiros. Quando a
