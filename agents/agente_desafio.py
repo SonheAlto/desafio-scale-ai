@@ -2,11 +2,11 @@
 
 Entrypoint: responder(pergunta) -> {"resposta": str, "trace": list}
 
+#Modelo via env MODELO_LLM (default: gpt-5.4-mini, key em OPENAI_API_KEY).
 Modelo via env MODELO_LLM (default: gpt-5.4-mini, key em OPENAI_API_KEY).
 """
 
 import os
-import re
 import sqlite3
 import sys
 from pathlib import Path
@@ -43,21 +43,6 @@ disponiveis.
 Regras:
 - Os roteiros e os dados do banco estao em INGLES. Formule buscas e consultas
   em ingles; responda ao usuario em portugues.
-- Use consultar_sql para fatos estruturados, rankings, contagens e comparacoes.
-  O schema e: filmes(id, titulo, ano, certificado, duracao_min, nota_imdb,
-  metascore, votos, bilheteria_usd, diretor, sinopse, tem_roteiro),
-  filme_genero(filme_id, genero) e filme_ator(filme_id, ator, posicao).
-- A tabela filme_ator ja representa o elenco principal: cada filme tem ate
-  quatro atores, e `posicao` indica apenas a ordem dos creditos. Portanto,
-  para perguntas como "em quantos filmes X aparece no elenco principal?",
-  conte todas as linhas `WHERE ator='X'`; nao filtre `posicao=1`. Use
-  `posicao` somente quando a pergunta pedir explicitamente o primeiro ator,
-  protagonista ou uma posicao especifica.
-- Para JOINs, ligue filme_genero.filme_id ou filme_ator.filme_id a filmes.id.
-  Para rankings, selecione todos os candidatos, use ORDER BY e LIMIT no SQL.
-- Use buscar_roteiros para fatos que aparecem no texto dos roteiros. Quando a
-  pergunta mencionar filmes especificos, passe o titulo em `filme` e use k=3
-  ou k=5 se a resposta puder estar espalhada em mais de um trecho.
 - Preencha primeiro o rationale (quais tools usou e por que) e so depois a
   resposta. Se a pergunta pede um numero, de o numero exato retornado pela tool.
 
@@ -73,18 +58,14 @@ agente = Agent(instructions=INSTRUCOES, retries=3, output_type=RespostaAgente)
 
 
 @agente.tool_plain
-def buscar_roteiros(consulta: str, k: int = 3, filme: str | None = None) -> list[dict]:
+def buscar_roteiros(consulta: str, k: int = 1) -> list[dict]:
     """Busca trechos dos roteiros dos filmes.
 
     Args:
         consulta: o que procurar, em ingles.
         k: quantos trechos retornar.
-        filme: titulo exato do filme para restringir a busca, se conhecido.
     """
-    # Evita retornos excessivamente grandes, sem descartar os demais trechos
-    # solicitados pelo agente.
-    k_seguro = max(1, min(int(k), 8))
-    return buscar(consulta, k=k_seguro, filme=filme)
+    return buscar(consulta, k=max(1, min(int(k), 8)))
 
 
 @agente.tool_plain
@@ -96,8 +77,6 @@ def consultar_sql(sql: str) -> list[dict]:
     """
     interna = sql.strip().rstrip(";")
     try:
-        if not re.match(r"^(SELECT|WITH)\b", interna, flags=re.IGNORECASE):
-            raise ModelRetry("A tool aceita apenas consultas SELECT ou WITH.")
         return executar_sql(interna)
     except sqlite3.Error as e:
         raise ModelRetry(f"Erro de SQL: {e}") from e
@@ -120,19 +99,7 @@ if __name__ == "__main__":
     from utils.trace import imprimir_trace, salvar_trace
 
     pergunta = " ".join(sys.argv[1:]) or "Qual filme de Christopher Nolan tem a maior bilheteria?"
-    try:
-        r = responder(pergunta)
-    except Exception as e:  # noqa: BLE001 — reduz traceback de falhas externas no CLI
-        if os.environ.get("DEBUG_TRACEBACK") == "1":
-            raise
-        mensagem = str(e)
-        if "credit_balance_exhausted" in mensagem or "no credits remaining" in mensagem.lower():
-            print("Erro: a API OpenAI está sem créditos. Verifique o billing da organização ou use outra chave com saldo.")
-        elif "429" in mensagem or "rate limit" in mensagem.lower():
-            print("Erro: limite de requisições da API OpenAI atingido. Tente novamente mais tarde.")
-        else:
-            print(f"Erro ao executar o agente: {type(e).__name__}: {mensagem}")
-        raise SystemExit(1)
+    r = responder(pergunta)
     print(f"\nPERGUNTA: {pergunta}\n")
     imprimir_trace(r["trace"])
     print(f"\nRESPOSTA: {r['resposta']}")
